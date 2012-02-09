@@ -16,7 +16,7 @@ class Zend_View_Helper_LightningPackerLink extends Zend_View_Helper_HeadLink
         $this->getContainer()->ksort();
         $bag = array();
 
-        foreach($this as $item) {
+        foreach ($this as $item) {
             $item = (array) $item;
             $bag[] = $item['href'];
         }
@@ -26,7 +26,7 @@ class Zend_View_Helper_LightningPackerLink extends Zend_View_Helper_HeadLink
 
 
     public function lightningPackerLink(array $attributes = null,
-        $placement = Zend_View_Helper_Placeholder_Container_Abstract::APPEND) 
+        $placement = Zend_View_Helper_Placeholder_Container_Abstract::APPEND)
     {
         parent::headLink($attributes, $placement);
         return $this;
